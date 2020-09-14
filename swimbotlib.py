@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
-'''Hello to the world from ev3dev.org'''
+'''
+The Swimbot code library
+'''
 
-import os
-import sys
-import time
 from ev3dev2.motor import MoveTank, OUTPUT_B, OUTPUT_C
 from ev3dev2.sensor.lego import ColorSensor
 from ev3dev2.button import Button
-from time import sleep
 from ev3dev2.led import Leds
 
 # state constants
