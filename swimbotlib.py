@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 '''
 The Swimbot code library
 '''

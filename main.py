@@ -1,9 +1,10 @@
+#!/usr/bin/env python3
+
 import os
 import sys
 import time
 from time import sleep
 from swimbotlib import *
-
 
 def main():
     '''The main function of our program'''
