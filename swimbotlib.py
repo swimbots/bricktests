@@ -2,6 +2,8 @@
 The Swimbot code library
 '''
 
+import os
+import sys
 from ev3dev2.motor import MoveTank, OUTPUT_B, OUTPUT_C
 from ev3dev2.sensor.lego import ColorSensor
 from ev3dev2.button import Button
@@ -52,7 +54,7 @@ def initialize_leds():
     leds.set_color('RIGHT', 'YELLOW')
 
 
-def press_button():
+def wait_for_button_press():
     btn = Button()
     while True:
         if btn.any():
@@ -62,15 +64,16 @@ def press_button():
 
 
 def calibrate_white(cl):
-    btn = Button()
     debug_print("Calibrate Sensor...press button to exit")
+
     cl.mode = ColorSensor.MODE_COL_REFLECT
+
+    btn = Button()
     while True:
         if btn.any():
             return
         else:
             cl.calibrate_white()
-
 
 
 def display_reset():
