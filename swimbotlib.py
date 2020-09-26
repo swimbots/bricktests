@@ -82,3 +82,44 @@ def display_reset():
     set_cursor(OFF)
     set_font('Lat15-Terminus24x12')
 
+def Linefollow(s1,s2,color2follow,stop,var):
+    rtmotor=motor(port.B)
+    lfmotor=motor(port.C)
+    cl1 = ColorSensor(s1)
+    cl2 = ColorSensor(s2)
+    cl1.mode = 'COL-REFLECT'
+    cl2.mode = 'COL-REFLECT'
+    move = True
+    robot = DriveBase(lfmotor, rtmotr, WHEEL_DIAMETER, AXLE_TRACK)
+    Drive()
+    if stop = "rotations":
+        while move=True:
+            if lfmotor.degrees=Var:
+                stop()
+                break
+            if cl1.reflected_light_intensity==-1,0,1:
+                pass
+            elif cl1.reflected_light_intensity>1 and cl2.reflected_light_intensity<-1:
+                rtmotorturn(0-cl1.reflected_light_intensity)
+            elif cl1.reflected_light_intensity<-1 and cl2.reflected_light_intensity>1:
+                lfmotorturn(0-cl2.reflected_light_intensity)
+    if stop = "color":
+        while move=True:
+            if var=Black
+                if cl1.reflected_light_intensity<-40:
+                    stop()
+                    break
+            if var=white
+                if cl1.reflected_light_intensity>40:
+                    stop()
+                    break
+            if var=gray
+                if cl1.reflected_light_intensity==1,0,-1:
+                    stop()
+                    break
+            if cl1.reflected_light_intensity==-1,0,1:
+                pass
+            elif cl1.reflected_light_intensity>1 and cl2.reflected_light_intensity<-1:
+                rtmotorturn(0-cl1.reflected_light_intensity)
+            elif cl1.reflected_light_intensity<-1 and cl2.reflected_light_intensity>1:
+                lfmotorturn(0-cl2.reflected_light_intensity)
